@@ -50,9 +50,9 @@ export function CTASection() {
           transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="text-4xl lg:text-6xl font-semibold mb-6 tracking-tight"
         >
-          Ready to modernise your{' '}
+          Ready to stop{' '}
           <span className="relative inline-block">
-            academic integrity?
+            losing submissions?
             <motion.span
               initial={{ scaleX: 0 }}
               animate={isInView ? { scaleX: 1 } : {}}
@@ -68,7 +68,7 @@ export function CTASection() {
           transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="text-xl text-white/90 mb-12 leading-relaxed max-w-2xl mx-auto"
         >
-          Talk to our team about bringing HandIn to your university. We'll show you how it works and answer all your questions.
+          Start free as an individual lecturer, or talk to our team about bringing HandIn to your department or university.
         </motion.p>
 
         <motion.div 
@@ -84,8 +84,7 @@ export function CTASection() {
             className="px-10 py-5 bg-white text-[#E85002] rounded-xl hover:bg-gray-50 transition-all flex items-center gap-3 group shadow-2xl hover:shadow-white/20 relative overflow-hidden font-medium"
           >
             <span className="relative z-10 flex items-center gap-3">
-              <Play size={20} className="fill-[#E85002]" />
-              Watch demo
+              Start free
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </span>
             {/* Shimmer effect */}
@@ -102,8 +101,7 @@ export function CTASection() {
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             className="px-10 py-5 bg-transparent text-white rounded-xl border-2 border-white hover:bg-white/10 transition-all flex items-center gap-2 shadow-xl backdrop-blur-sm font-medium"
           >
-            Add your university
-            <ArrowRight size={20} />
+            Talk to sales
           </motion.button>
         </motion.div>
 
