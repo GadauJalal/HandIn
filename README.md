@@ -1,27 +1,11 @@
-# HandIn - Academic Integrity Platform
 
-HandIn is the first platform built specifically for African institutions to manage submissions, detect AI, and prevent plagiarism with tools that actually work for you.
+  # Marketing Homepage Design
 
-## About
+  This is a code bundle for Marketing Homepage Design. The original project is available at https://www.figma.com/design/twOClQqH9wWUdwwmg1S41l/Marketing-Homepage-Design.
 
-HandIn reimagines academic integrity for African universities by addressing the unique challenges that international tools weren't designed to solve:
+  ## Running the code
 
+  Run `npm i` to install the dependencies.
 
-
-## Running the code
-
-Run `npm i` to install the dependencies.
-
-Run `npm run dev` to start the development server.
-
-## Tech Stack
-
-- React 18
-- TypeScript
-- Vite
-- Tailwind CSS
-- Radix UI Components
-- Motion (Framer Motion)
-- Lucide Icons
-
-
+  Run `npm run dev` to start the development server.
+  

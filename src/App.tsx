@@ -12,15 +12,13 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white font-sans text-zinc-900 antialiased selection:bg-[#E85002]/20 selection:text-[#E85002]">
       <Navigation />
-      <main>
-        <Hero />
-        <ProblemSection />
-        <FeaturesSection />
-        <HowItWorksSection />
-        <WhoItsForSection />
-        <TrustSection />
-        <CTASection />
-      </main>
+      <Hero />
+      <ProblemSection />
+      <FeaturesSection />
+      <HowItWorksSection />
+      <WhoItsForSection />
+      <TrustSection />
+      <CTASection />
       <Footer />
     </div>
   );

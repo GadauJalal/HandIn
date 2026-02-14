@@ -1,5 +1,5 @@
 'use client';
-import { ArrowRight, CheckCircle2, Sparkles, Play, ShieldCheck, Globe2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Sparkles, Play, ShieldCheck, FileCheck, Clock } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
@@ -56,7 +56,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="text-xl text-zinc-600 leading-relaxed max-w-xl mx-auto lg:mx-0 font-normal"
             >
-             HandIn is the first assessment workflow platform built for African universities. Digital submissions, proof of receipt, and complete traceability from upload to grade release.
+              HandIn is the first assessment workflow platform built for African universities. Digital submissions, proof of receipt, and complete traceability from upload to grade release.
             </motion.p>
 
             <motion.div 
@@ -70,8 +70,8 @@ export function Hero() {
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-4 bg-[#E85002] text-white rounded-full font-medium shadow-lg shadow-[#E85002]/20 hover:shadow-xl hover:shadow-[#E85002]/30 transition-all flex items-center justify-center gap-2"
               >
-                <Play size={18} className="fill-white" />
-                Watch demo
+                Start free
+                <ArrowRight size={18} />
               </motion.button>
               
               <motion.button 
@@ -79,8 +79,8 @@ export function Hero() {
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-4 bg-white text-zinc-700 rounded-full font-medium border border-zinc-200 hover:bg-zinc-50 transition-all flex items-center justify-center gap-2 shadow-sm"
               >
-                Partner with us
-                <ArrowRight size={18} />
+                <Play size={18} className="fill-zinc-700" />
+                Watch demo
               </motion.button>
             </motion.div>
 
@@ -128,7 +128,7 @@ export function Hero() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent mix-blend-overlay"></div>
                   
-                 {/* Floating Cards - Premium Look */}
+                  {/* Floating Cards - Premium Look */}
                   <motion.div 
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
