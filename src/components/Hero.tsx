@@ -46,8 +46,8 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-5xl lg:text-7xl font-bold text-zinc-900 leading-[1.05] tracking-tight"
             >
-              Academic integrity, <br className="hidden lg:block" />
-              <span className="text-[#E85002]">reimagined.</span>
+              Assessment operations, <br className="hidden lg:block" />
+              <span className="text-[#E85002]">finally reliable.</span>
             </motion.h1>
             
             <motion.p 
@@ -56,7 +56,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="text-xl text-zinc-600 leading-relaxed max-w-xl mx-auto lg:mx-0 font-normal"
             >
-              HandIn is the first platform built specifically for African institutions. Manage submissions, detect AI, and prevent plagiarism with tools that actually work for you.
+             HandIn is the first assessment workflow platform built for African universities. Digital submissions, proof of receipt, and complete traceability from upload to grade release.
             </motion.p>
 
             <motion.div 
@@ -128,20 +128,23 @@ export function Hero() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent mix-blend-overlay"></div>
                   
-                  {/* Floating Cards - Premium Look */}
+                 {/* Floating Cards - Premium Look */}
                   <motion.div 
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.6 }}
-                    className="absolute bottom-8 right-8 bg-white/90 backdrop-blur-xl p-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/50 max-w-[240px]"
+                    className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-xl p-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/50 max-w-[260px]"
                   >
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
-                        <ShieldCheck size={16} />
+                      <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
+                        <FileCheck size={20} />
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-zinc-900">Plagiarism Check</div>
-                        <div className="text-xs text-zinc-500 mt-1">Document passed with 98% uniqueness score.</div>
+                        <div className="text-sm font-semibold text-zinc-900">Submission Received</div>
+                        <div className="text-xs text-zinc-500 mt-1 font-mono bg-zinc-100 px-1.5 py-0.5 rounded inline-block">Ref: HI-2026-04821</div>
+                        <div className="text-xs text-green-600 mt-1 flex items-center gap-1">
+                           <CheckCircle2 size={10} /> Confirmed
+                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -150,11 +153,16 @@ export function Hero() {
                     initial={{ y: -20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.8 }}
-                    className="absolute top-8 left-8 bg-white/90 backdrop-blur-xl p-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/50"
+                    className="absolute top-8 left-8 bg-white/95 backdrop-blur-xl p-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/50"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                      <div className="text-sm font-medium text-zinc-700">AI Detection Active</div>
+                      <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                        <Clock size={16} />
+                      </div>
+                      <div>
+                        <div className="text-xs text-zinc-500 uppercase font-semibold tracking-wider">Status</div>
+                        <div className="text-sm font-bold text-zinc-900">Under Review</div>
+                      </div>
                     </div>
                   </motion.div>
                 </div>
