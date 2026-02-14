@@ -1,5 +1,5 @@
 'use client';
-import { ArrowRight, Upload, Scan, CheckCircle, Sparkles } from 'lucide-react';
+import { ArrowRight, Upload, FileSearch, GraduationCap, ChevronRight, Sparkles } from 'lucide-react';
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 
@@ -11,26 +11,26 @@ export function HowItWorksSection() {
     {
       number: "01",
       icon: Upload,
-      title: "Students upload assignments",
-      description: "Students submit their work through the platform before the deadline. No printing, no paper, no stress.",
+      title: "Students submit digitally",
+      description: "Students upload work through the platform before the deadline. Instant receipt generated. No printing, no paper, no lost submissions.",
       color: "from-[#E85002] to-[#d14702]",
-      features: ["Drag & drop", "Multiple formats", "Instant confirmation"]
+      features: ["Drag & drop", "Instant receipt", "WhatsApp confirmation"]
     },
     {
       number: "02",
-      icon: Scan,
-      title: "HandIn runs AI and plagiarism checks",
-      description: "Our system automatically scans for AI-generated content and checks against both global and local databases.",
+      icon: FileSearch,
+      title: "Submissions tracked end-to-end",
+      description: "Every submission linked to the right student and assessment. Status visible to everyone. Nothing goes missing.",
       color: "from-[#d14702] to-[#b83d02]",
-      features: ["AI detection", "Local database", "Global check"]
+      features: ["Full traceability", "Status updates", "Audit trail"]
     },
     {
       number: "03",
-      icon: CheckCircle,
-      title: "Lecturers review and release results",
-      description: "Faculty get clear, actionable reports. They can review, grade, and release results all in one place.",
+      icon: GraduationCap,
+      title: "Lecturers mark and release grades",
+      description: "Review submissions, enter marks, and release grades—all in one place. Students notified automatically.",
       color: "from-[#E85002] to-[#d14702]",
-      features: ["Clear reports", "One dashboard", "Bulk grading"]
+      features: ["One dashboard", "Grade release", "Automatic notifications"]
     }
   ];
 
@@ -57,30 +57,26 @@ export function HowItWorksSection() {
           <h2 className="text-4xl lg:text-6xl font-semibold text-black mb-6 tracking-tight">
             Simple workflow,{' '}
             <span className="bg-gradient-to-r from-[#E85002] to-[#d14702] bg-clip-text text-transparent">
-              powerful results
+              complete traceability
             </span>
           </h2>
           <p className="text-xl text-[#646464] max-w-2xl mx-auto leading-relaxed">
-            HandIn streamlines the entire assignment process in three easy steps.
+            HandIn handles the entire assessment lifecycle in three steps.
           </p>
         </motion.div>
 
         <div className="relative">
           {/* Animated connection line - Desktop only */}
-          <div className="hidden lg:block absolute top-20 left-[10%] right-[10%] h-1 overflow-hidden">
+          <div className="hidden lg:block absolute top-[6.5rem] left-[10%] right-[10%] h-px overflow-visible z-0">
+             {/* Dashed base line */}
+            <div className="absolute inset-0 border-t-2 border-dashed border-zinc-100"></div>
+            
+            {/* Animated progress line */}
             <motion.div
               initial={{ scaleX: 0 }}
               animate={isInView ? { scaleX: 1 } : {}}
               transition={{ duration: 1.5, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="h-full bg-gradient-to-r from-[#E85002]/30 via-[#E85002]/60 to-[#E85002]/30 origin-left"
-            ></motion.div>
-            
-            {/* Animated dot traveling along the line */}
-            <motion.div
-              initial={{ left: '0%' }}
-              animate={isInView ? { left: '100%' } : {}}
-              transition={{ duration: 2, delay: 0.8, ease: "easeInOut" }}
-              className="absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-[#E85002] rounded-full shadow-lg shadow-[#E85002]/50"
+              className="absolute inset-0 border-t-2 border-dashed border-[#E85002]/30 origin-left"
             ></motion.div>
           </div>
 
@@ -109,33 +105,23 @@ export function HowItWorksSection() {
                         damping: 20 
                       } 
                     }}
-                    className="relative bg-white rounded-3xl p-8 border-2 border-[#E85002]/10 hover:border-[#E85002]/30 transition-all duration-300 hover:shadow-2xl hover:shadow-[#E85002]/20"
+                    className="relative bg-white rounded-3xl p-8 border border-zinc-100 hover:border-[#E85002]/30 transition-all duration-300 hover:shadow-2xl hover:shadow-[#E85002]/10 z-10"
                   >
-                    {/* Floating number badge - Moved to card corner */}
-                    <motion.div 
-                      initial={{ scale: 0 }}
-                      animate={isInView ? { scale: 1 } : {}}
-                      transition={{ 
-                        delay: 0.5 + index * 0.2, 
-                        type: "spring", 
-                        stiffness: 200 
-                      }}
-                      className="absolute top-6 left-6 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-semibold shadow-lg z-20"
-                    >
+                    {/* Step Number Circle - Integrated into design */}
+                    <div className="absolute top-6 left-6 w-8 h-8 rounded-full bg-zinc-50 border border-zinc-100 text-zinc-400 text-xs font-bold flex items-center justify-center font-mono group-hover:bg-[#E85002] group-hover:text-white group-hover:border-[#E85002] transition-colors">
                       {step.number}
-                    </motion.div>
+                    </div>
 
-                    {/* Step Number Circle */}
-                    <div className="relative mb-8">
+                    {/* Icon Container */}
+                    <div className="relative mb-8 pt-4">
                       <motion.div
                         whileHover={{ 
-                          scale: 1.1, 
-                          rotate: 5 
+                          scale: 1.05, 
                         }}
                         transition={{ duration: 0.3 }}
-                        className={`w-24 h-24 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center mx-auto shadow-xl shadow-[#E85002]/40 group-hover:shadow-2xl group-hover:shadow-[#E85002]/60 relative overflow-hidden`}
+                        className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center mx-auto shadow-lg shadow-[#E85002]/30 group-hover:shadow-xl group-hover:shadow-[#E85002]/50 relative overflow-hidden`}
                       >
-                        <Icon className="text-white relative z-10" size={40} />
+                        <Icon className="text-white relative z-10" size={32} />
                         
                         {/* Sparkle effect on hover */}
                         <motion.div
@@ -144,34 +130,31 @@ export function HowItWorksSection() {
                           transition={{ duration: 0.5 }}
                           className="absolute inset-0 bg-white/20"
                         >
-                          <Sparkles className="absolute top-2 right-2 text-white" size={16} />
+                          <Sparkles className="absolute top-2 right-2 text-white" size={14} />
                         </motion.div>
                       </motion.div>
                       
-                      {/* Arrow indicator - Desktop */}
+                      {/* Refined Arrow Connector - Desktop */}
                       {index < steps.length - 1 && (
-                        <motion.div
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={isInView ? { opacity: 1, x: 0 } : {}}
-                          transition={{ delay: 1 + index * 0.2 }}
-                          className="hidden lg:block absolute top-12 -right-16 xl:-right-20"
-                        >
-                          <motion.div
-                            animate={{ x: [0, 5, 0] }}
-                            transition={{ duration: 1.5, repeat: Infinity }}
-                          >
-                            <ArrowRight className="text-[#E85002]/40 group-hover:text-[#E85002] transition-colors" size={32} />
-                          </motion.div>
-                        </motion.div>
+                        <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 -right-[calc(50%-2.5rem)] xl:-right-[calc(50%-3rem)] z-0">
+                           <motion.div
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                            transition={{ delay: 1 + index * 0.2 }}
+                            className="w-10 h-10 rounded-full bg-white border border-zinc-100 shadow-sm flex items-center justify-center text-zinc-300 group-hover:text-[#E85002] group-hover:border-[#E85002]/30 transition-all duration-500"
+                           >
+                             <ChevronRight size={18} strokeWidth={2.5} />
+                           </motion.div>
+                        </div>
                       )}
                     </div>
 
                     {/* Step Content */}
                     <div className="text-center">
-                      <h3 className="text-2xl font-semibold text-black mb-4 group-hover:text-[#E85002] transition-colors">
+                      <h3 className="text-xl font-bold text-zinc-900 mb-4 group-hover:text-[#E85002] transition-colors">
                         {step.title}
                       </h3>
-                      <p className="text-[#646464] text-lg leading-relaxed mb-6">
+                      <p className="text-zinc-500 text-base leading-relaxed mb-6">
                         {step.description}
                       </p>
 
@@ -183,32 +166,25 @@ export function HowItWorksSection() {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={isInView ? { opacity: 1, scale: 1 } : {}}
                             transition={{ delay: 0.8 + index * 0.2 + idx * 0.1 }}
-                            className="px-3 py-1 bg-[#E85002]/5 rounded-full text-xs text-[#646464] border border-[#E85002]/10"
+                            className="px-2.5 py-1 bg-zinc-50 rounded-md text-[11px] font-medium text-zinc-500 border border-zinc-100 group-hover:border-[#E85002]/10 group-hover:bg-[#E85002]/5 group-hover:text-[#E85002] transition-colors"
                           >
                             {feature}
                           </motion.div>
                         ))}
                       </div>
                     </div>
-
-                    {/* Decorative corner gradient */}
-                    <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-[#E85002]/10 to-transparent rounded-full blur-2xl group-hover:from-[#E85002]/20 transition-all"></div>
                   </motion.div>
 
                   {/* Mobile Arrow */}
                   {index < steps.length - 1 && (
-                    <div className="lg:hidden flex justify-center mt-8">
+                    <div className="lg:hidden flex justify-center -my-4 relative z-20">
                       <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ delay: 0.8 + index * 0.2 }}
+                        className="w-10 h-10 rounded-full bg-white border border-zinc-100 shadow-sm flex items-center justify-center text-zinc-300"
                       >
-                        <motion.div
-                          animate={{ y: [0, 5, 0] }}
-                          transition={{ duration: 1.5, repeat: Infinity }}
-                        >
-                          <ArrowRight className="text-[#E85002]/40 rotate-90" size={32} />
-                        </motion.div>
+                         <ChevronRight className="rotate-90" size={20} />
                       </motion.div>
                     </div>
                   )}

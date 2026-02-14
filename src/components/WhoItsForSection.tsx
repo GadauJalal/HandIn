@@ -12,20 +12,20 @@ export function WhoItsForSection() {
     {
       icon: GraduationCap,
       title: "Students",
-      description: "Submit assignments digitally, track deadlines, and receive instant confirmation.",
-      features: ["WhatsApp reminders", "Easy upload", "Instant receipts"],
+      description: "Submit assignments digitally, get instant proof of receipt, and track your submission status in real-time.",
+      features: ["Instant receipts", "Status tracking", "WhatsApp updates"],
     },
     {
       icon: BookOpen,
       title: "Lecturers",
-      description: "Review submissions, check for plagiarism and AI content, and release grades.",
-      features: ["Clear AI reports", "Bulk grading", "Plagiarism insights"],
+      description: "Receive submissions reliably, see everything in one dashboard, and release grades without spreadsheet chaos. Start free—no IT approval needed.",
+      features: ["One dashboard", "No lost work", "Start in 5 minutes"],
     },
     {
       icon: Shield,
-      title: "Admins",
-      description: "Manage courses, monitor integrity metrics, and maintain institutional standards.",
-      features: ["Full oversight", "Analytics", "Policy control"],
+      title: "Administrators",
+      description: "Full visibility across courses. Complete audit trails. Respond to queries with evidence, not guesswork.",
+      features: ["Full oversight", "Audit trails", "Dispute resolution"],
     }
   ];
 
@@ -54,7 +54,7 @@ export function WhoItsForSection() {
             <span className="text-[#E85002]">academic ecosystem.</span>
           </h2>
           <p className="text-xl text-zinc-500 max-w-2xl mx-auto leading-relaxed">
-            Whether you're a student, lecturer, or administrator, HandIn makes academic integrity simple.
+            Whether you're a student, lecturer, or administrator, HandIn makes assessment operations reliable.
           </p>
         </motion.div>
 

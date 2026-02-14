@@ -1,5 +1,5 @@
 'use client';
-import { DollarSign, FileText, Cpu, Copy } from 'lucide-react';
+import { FileQuestion, Printer, EyeOff, Clock, AlertCircle, Files, Search, CalendarClock } from 'lucide-react';
 import { motion, useInView, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 
@@ -17,36 +17,36 @@ export function ProblemSection() {
 
   const problems = [
     {
-      icon: DollarSign,
-      title: "High cost of international tools",
-      description: "Turnitin and similar platforms price out African institutions",
+      icon: FileQuestion,
+      title: "Lost submissions",
+      description: "Physical hand-ins disappear. No proof of receipt. Disputes become normal.",
       color: "from-[#E85002]/20 to-[#E85002]/5",
-      stat: "$3K+",
-      statLabel: "per year"
+      stat: "30%",
+      statLabel: "SUBMISSIONS DISPUTED"
     },
     {
-      icon: FileText,
-      title: "Paper-based submissions",
-      description: "Printing stress, lost assignments, and environmental waste",
+      icon: Printer,
+      title: "Paper-based processes",
+      description: "Printing costs, binding stress, physical storage, and environmental waste.",
       color: "from-[#E85002]/15 to-[#E85002]/5",
-      stat: "100K",
-      statLabel: "pages wasted"
+      stat: "₦50K+",
+      statLabel: "STUDENT COSTS/YEAR"
     },
     {
-      icon: Cpu,
-      title: "Rising AI tool usage",
-      description: "No clear detection for AI-generated content in student work",
+      icon: EyeOff,
+      title: "No status visibility",
+      description: "Students wait weeks with no idea if their work was received or where it is.",
       color: "from-[#E85002]/20 to-[#E85002]/10",
-      stat: "85%",
-      statLabel: "students use AI"
+      stat: "0%",
+      statLabel: "VISIBILITY"
     },
     {
-      icon: Copy,
-      title: "Local plagiarism",
-      description: "Classmate-to-classmate copying that global databases miss",
+      icon: Clock,
+      title: "Grade delays & errors",
+      description: "Manual tracking in spreadsheets leads to transcription errors and missed deadlines.",
       color: "from-[#E85002]/15 to-[#E85002]/5",
-      stat: "40%",
-      statLabel: "goes undetected"
+      stat: "3-6 WEEKS",
+      statLabel: "AVERAGE DELAY"
     }
   ];
 
@@ -81,7 +81,7 @@ export function ProblemSection() {
           </motion.div>
 
           <h2 className="text-4xl lg:text-6xl font-semibold text-black mb-6 tracking-tight">
-            Today's academic challenges{' '}
+            Today's assessment challenges{' '}
             <span className="relative inline-block">
               <span className="relative z-10">in Africa</span>
               <motion.span
@@ -93,7 +93,7 @@ export function ProblemSection() {
             </span>
           </h2>
           <p className="text-xl text-[#646464] max-w-3xl mx-auto leading-relaxed">
-            Universities across the continent face unique obstacles that international tools weren't designed to solve.
+            Universities across the continent process thousands of submissions through systems designed for smaller cohorts. The result: lost work, missing marks, and disputes that erode trust.
           </p>
         </motion.div>
 
@@ -121,7 +121,7 @@ export function ProblemSection() {
                       damping: 20 
                     } 
                   }}
-                  className="h-full p-8 rounded-2xl bg-white border border-zinc-200 hover:border-[#E85002]/20 transition-all duration-300 hover:shadow-xl hover:shadow-[#E85002]/5 relative overflow-hidden group-hover:bg-zinc-50/50"
+                  className="h-full p-8 rounded-2xl bg-white border border-zinc-200 hover:border-[#E85002]/20 transition-all duration-300 hover:shadow-xl hover:shadow-[#E85002]/5 relative overflow-hidden group-hover:bg-zinc-50/50 flex flex-col justify-between"
                 >
                   <div className="relative z-10">
                     <div className="w-12 h-12 rounded-xl bg-[#E85002]/10 flex items-center justify-center mb-6 text-[#E85002] group-hover:bg-[#E85002] group-hover:text-white transition-colors duration-300">
@@ -134,11 +134,13 @@ export function ProblemSection() {
                     <p className="text-zinc-500 leading-relaxed mb-6 text-sm">
                       {problem.description}
                     </p>
+                  </div>
 
-                    {/* Stat badge */}
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-2xl font-bold text-zinc-900 tracking-tight group-hover:text-[#E85002] transition-colors">{problem.stat}</span>
-                      <span className="text-xs text-zinc-500 font-medium uppercase tracking-wide">{problem.statLabel}</span>
+                  {/* Stat badge */}
+                  <div className="mt-4 pt-4 border-t border-zinc-100">
+                    <div className="flex flex-col">
+                      <span className="text-3xl font-bold text-zinc-900 tracking-tight group-hover:text-[#E85002] transition-colors">{problem.stat}</span>
+                      <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider mt-1">{problem.statLabel}</span>
                     </div>
                   </div>
                 </motion.div>
