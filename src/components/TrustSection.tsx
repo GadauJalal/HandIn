@@ -19,18 +19,18 @@ export function TrustSection() {
   const stats = [
     {
       icon: FileCheck,
-      value: "50,000+",
-      label: "Assignments processed",
+      value: "10,000+",
+      label: "SUBMISSIONS PROCESSED",
     },
     {
       icon: Building2,
-      value: "12",
-      label: "Universities piloting",
+      value: "5",
+      label: "UNIVERSITIES PILOTING",
     },
     {
       icon: Trees,
       value: "100,000+",
-      label: "Pages of paper saved",
+      label: "PAGES OF PAPER SAVED",
     }
   ];
 
@@ -64,7 +64,7 @@ export function TrustSection() {
             </h2>
 
             <p className="text-lg text-zinc-400 mb-12 leading-relaxed max-w-lg">
-              We understand the unique challenges of academic institutions across the continent. HandIn is designed from the ground up to work with your existing infrastructure.
+              We understand the constraints: low bandwidth, high data costs, and hybrid paper-to-digital realities. HandIn is designed from the ground up to work with your existing infrastructure.
             </p>
 
             {/* Stats Grid - Minimalist */}
@@ -90,7 +90,7 @@ export function TrustSection() {
               className="relative pl-6 border-l-2 border-[#E85002]"
             >
               <p className="text-zinc-300 text-lg italic mb-4">
-                "HandIn has transformed how we manage academic integrity. The local database feature catches plagiarism that international tools completely miss."
+                "Before HandIn, we lost submissions every semester and spent weeks on disputes. Now every submission has a receipt, and we haven't had a single 'lost work' claim."
               </p>
               <div>
                 <div className="font-semibold text-white">Dr. Adebayo Ogunleye</div>
