@@ -7,7 +7,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 export function Footer() {
   const footerLinks = {
     Product: ["Features", "Pricing", "Security", "Integrations"],
-    Solutions: ["For Students", "For Lecturers", "For Admins", "For Universities"],
+    Solutions: ["For Students", "For Lecturers", "For Departments", "For Universities"],
     Resources: ["Documentation", "Blog", "Case Studies", "Support"],
     Company: ["About", "Careers", "Contact", "Privacy Policy"]
   };
@@ -40,7 +40,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Academic integrity platform for African universities.
+              Assessment operations infrastructure for African universities.
             </p>
             <div className="flex items-center gap-2 text-sm text-[#E85002]">
               <div className="w-2 h-2 rounded-full bg-[#E85002] animate-pulse"></div>
